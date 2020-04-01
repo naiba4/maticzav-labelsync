@@ -24,8 +24,7 @@ repos:
       kind/bug:
         color: '#EEEEEE'
         description: A reported bug.
-        alias:
-          - bug
+        alias: []
         siblings: []
       kind/regression:
         color: '#EEEEEE'
@@ -35,8 +34,7 @@ repos:
       kind/feature:
         color: '#EEEEEE'
         description: A request for a new feature.
-        alias:
-          - enhancement
+        alias: []
         siblings: []
       kind/improvement:
         color: '#EEEEEE'
@@ -46,8 +44,7 @@ repos:
       kind/docs:
         color: '#EEEEEE'
         description: A documentation change is required.
-        alias:
-          - documentation
+        alias: []
         siblings: []
       kind/discussion:
         color: '#EEEEEE'
@@ -57,6 +54,5 @@ repos:
       kind/question:
         color: '#EEEEEE'
         description: Developer asked a question. No code changes required.
-        alias:
-          - question
+        alias: []
         siblings: []
