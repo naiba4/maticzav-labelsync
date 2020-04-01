@@ -16,6 +16,10 @@ labelsync({
         removeUnconfiguredLabels: false,
       },
       labels: [
+        label({
+          name: 'test/jason',
+          color: colors.danger,
+        }),
         /* Bugs */
         label({
           name: 'bug/0-needs-info',
