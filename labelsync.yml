@@ -3,6 +3,10 @@ repos:
     config:
       removeUnconfiguredLabels: false
     labels:
+      test/jason:
+        color: '#FF5D5D'
+        alias: []
+        siblings: []
       bug/0-needs-info:
         color: '#FF5D5D'
         description: More information is needed for reproduction.
