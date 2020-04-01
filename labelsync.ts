@@ -13,13 +13,9 @@ labelsync({
     /* Personalized repositories */
     resk: repo({
       config: {
-        removeUnconfiguredLabels: false,
+        removeUnconfiguredLabels: true,
       },
       labels: [
-        label({
-          name: 'test/jason',
-          color: colors.danger,
-        }),
         /* Bugs */
         label({
           name: 'bug/0-needs-info',
