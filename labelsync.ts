@@ -73,5 +73,11 @@ labelsync({
         }),
       ],
     }),
+    'label-sync': repo({
+      config: {
+        removeUnconfiguredLabels: false,
+      },
+      labels: [...github],
+    }),
   },
 })

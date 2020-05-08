@@ -6,8 +6,8 @@
     "make": "ts-node labelsync.ts"
   },
   "dependencies": {
-    "husky": "latest",
-    "label-sync": "latest"
+    "husky": "4.2.5",
+    "label-sync": "3.5.0"
   },
   "devDependencies": {
     "prettier": "*",
