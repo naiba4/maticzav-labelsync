@@ -1,12 +1,62 @@
 repos:
   resk:
     config:
+      removeUnconfiguredLabels: false
+    labels:
+      wontfix:
+        color: '#000000'
+        description: This will not be worked on
+        alias: []
+        siblings: []
+      question:
+        color: '#d876e3'
+        description: Further information is requested
+        alias: []
+        siblings: []
+      invalid:
+        color: '#e4e669'
+        description: This doesn't seem right
+        alias: []
+        siblings: []
+      help wanted:
+        color: '#008672'
+        description: Extra attention is needed
+        alias: []
+        siblings: []
+      good first issue:
+        color: '#7057ff'
+        description: Good for newcomers
+        alias: []
+        siblings: []
+      enhancement:
+        color: '#a2eeef'
+        description: New feature or request
+        alias: []
+        siblings: []
+      duplicate:
+        color: '#cfd3d7'
+        description: This issue or pull request already exists
+        alias: []
+        siblings: []
+      documentation:
+        color: '#0075ca'
+        description: Improvements or additions to documentation
+        alias: []
+        siblings: []
+      bug:
+        color: '#d73a4a'
+        description: Something isn't working
+        alias: []
+        siblings: []
+  label-sync:
+    config:
       removeUnconfiguredLabels: true
     labels:
       kind/question:
         color: '#EEEEEE'
         description: Developer asked a question. No code changes required.
-        alias: []
+        alias:
+          - question
         siblings: []
       kind/discussion:
         color: '#EEEEEE'
@@ -16,7 +66,8 @@ repos:
       kind/docs:
         color: '#EEEEEE'
         description: A documentation change is required.
-        alias: []
+        alias:
+          - documentation
         siblings: []
       kind/improvement:
         color: '#EEEEEE'
@@ -26,7 +77,9 @@ repos:
       kind/feature:
         color: '#EEEEEE'
         description: A request for a new feature.
-        alias: []
+        alias:
+          - enhancement
+          - help wanted
         siblings: []
       kind/regression:
         color: '#EEEEEE'
@@ -36,7 +89,8 @@ repos:
       kind/bug:
         color: '#EEEEEE'
         description: A reported bug.
-        alias: []
+        alias:
+          - bug
         siblings: []
       bug/2-confirmed:
         color: '#FF5D5D'
@@ -56,52 +110,3 @@ repos:
         alias: []
         siblings:
           - kind/bug
-  label-sync:
-    config:
-      removeUnconfiguredLabels: false
-    labels:
-      bug:
-        color: '#d73a4a'
-        description: Something isn't working
-        alias: []
-        siblings: []
-      documentation:
-        color: '#0075ca'
-        description: Improvements or additions to documentation
-        alias: []
-        siblings: []
-      duplicate:
-        color: '#cfd3d7'
-        description: This issue or pull request already exists
-        alias: []
-        siblings: []
-      enhancement:
-        color: '#a2eeef'
-        description: New feature or request
-        alias: []
-        siblings: []
-      good first issue:
-        color: '#7057ff'
-        description: Good for newcomers
-        alias: []
-        siblings: []
-      help wanted:
-        color: '#008672'
-        description: Extra attention is needed
-        alias: []
-        siblings: []
-      invalid:
-        color: '#e4e669'
-        description: This doesn't seem right
-        alias: []
-        siblings: []
-      question:
-        color: '#d876e3'
-        description: Further information is requested
-        alias: []
-        siblings: []
-      wontfix:
-        color: '#000000'
-        description: This will not be worked on
-        alias: []
-        siblings: []
