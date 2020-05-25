@@ -1,6 +1,6 @@
 import { repo, label, colors } from 'label-sync'
 
-export const graphqlshield = repo({
+export const nookies = repo({
   config: {
     removeUnconfiguredLabels: true,
   },
