@@ -1,4 +1,4 @@
-import { repo, label } from 'label-sync'
+import { repo, label, colors } from 'label-sync'
 
 /**
  * Default collection of label in a Github repository.
@@ -8,50 +8,72 @@ export const resk = repo({
     removeUnconfiguredLabels: false,
   },
   labels: [
+    /* Bugs */
     label({
-      name: 'bug',
-      color: '#d73a4a',
-      description: "Something isn't working",
+      name: 'bug/0-needs-info',
+      color: colors.danger,
+      description: 'More information is needed for reproduction.',
+      siblings: ['kind/bug'],
     }),
     label({
-      name: 'documentation',
-      color: '#0075ca',
-      description: 'Improvements or additions to documentation',
+      name: 'bug/1-repro-available',
+      color: colors.danger,
+      description: 'A reproduction exists and needs to be confirmed.',
+      siblings: ['kind/bug'],
     }),
     label({
-      name: 'duplicate',
-      color: '#cfd3d7',
-      description: 'This issue or pull request already exists',
+      name: 'bug/2-confirmed',
+      color: colors.danger,
+      description: 'We have confirmed that this is a bug.',
+      siblings: ['kind/bug'],
+    }),
+    /* Kind */
+    label({
+      name: 'kind/bug',
+      color: colors.shiny,
+      description: 'A reported bug.',
+      alias: ['bug'],
     }),
     label({
-      name: 'enhancement',
-      color: '#a2eeef',
-      description: 'New feature or request',
+      name: 'kind/regression',
+      color: colors.shiny,
+      description: 'A reported bug in functionality that used to work before.',
     }),
     label({
-      name: 'good first issue',
-      color: '#7057ff',
-      description: 'Good for newcomers',
+      name: 'kind/feature',
+      color: colors.shiny,
+      description: 'A request for a new feature.',
+      alias: ['enhancement', 'help wanted'],
     }),
+    label({
+      name: 'kind/improvement',
+      color: colors.shiny,
+      description: 'An improvement to existing feature and code.',
+    }),
+    label({
+      name: 'kind/docs',
+      color: colors.shiny,
+      description: 'A documentation change is required.',
+      alias: ['documentation'],
+    }),
+    label({
+      name: 'kind/discussion',
+      color: colors.shiny,
+      description: 'Discussion is required.',
+    }),
+    label({
+      name: 'kind/question',
+      color: colors.shiny,
+      description: 'Developer asked a question. No code changes required.',
+      alias: ['question'],
+    }),
+    /* Other */
     label({
       name: 'help wanted',
-      color: '#008672',
-      description: 'Extra attention is needed',
-    }),
-    label({
-      name: 'invalid',
-      color: '#e4e669',
-      description: "This doesn't seem right",
-    }),
-    label({
-      name: 'question',
-      color: '#d876e3',
-      description: 'Further information is requested',
-    }),
-    label({
-      name: 'wontfix',
-      color: '#000000',
-      description: 'This will not be worked on',
+      color: colors.semiShiny,
+      description: 'Looking for help from community.',
+      siblings: ['kind/question'],
+      alias: ['help-wanted'],
     }),
   ],
 })

@@ -66,10 +66,11 @@ export const nookies = repo({
     }),
     /* Other */
     label({
-      name: 'help-wanted',
+      name: 'help wanted',
       color: colors.semiShiny,
       description: 'Looking for help from community.',
       siblings: ['kind/question'],
+      alias: ['help-wanted'],
     }),
   ],
 })
