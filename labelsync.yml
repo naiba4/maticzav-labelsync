@@ -176,42 +176,48 @@ repos:
     config:
       removeUnconfiguredLabels: true
     labels:
+      help-wanted:
+        color: '#9cedc6'
+        description: Looking for help from community.
+        alias: []
+        siblings:
+          - kind/question
       kind/question:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: Developer asked a question. No code changes required.
         alias:
           - question
         siblings: []
       kind/discussion:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: Discussion is required.
         alias: []
         siblings: []
       kind/docs:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A documentation change is required.
         alias:
           - documentation
         siblings: []
       kind/improvement:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: An improvement to existing feature and code.
         alias: []
         siblings: []
       kind/feature:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A request for a new feature.
         alias:
           - enhancement
           - help wanted
         siblings: []
       kind/regression:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A reported bug in functionality that used to work before.
         alias: []
         siblings: []
       kind/bug:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A reported bug.
         alias:
           - bug
