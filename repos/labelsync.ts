@@ -1,11 +1,5 @@
 import { repo, label, colors } from 'label-sync'
 
-/**
- * Label configuration used internally by Prisma team. Labels are grouped
- * by their intention (e.g. bug/*, kind/*, process/*) and give
- * great base for issue triaging.
- */
-
 export const labelSync = repo({
   config: {
     removeUnconfiguredLabels: true,

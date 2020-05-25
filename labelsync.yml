@@ -172,3 +172,65 @@ repos:
         alias: []
         siblings:
           - kind/bug
+  nookies:
+    config:
+      removeUnconfiguredLabels: true
+    labels:
+      kind/question:
+        color: '#EEEEEE'
+        description: Developer asked a question. No code changes required.
+        alias:
+          - question
+        siblings: []
+      kind/discussion:
+        color: '#EEEEEE'
+        description: Discussion is required.
+        alias: []
+        siblings: []
+      kind/docs:
+        color: '#EEEEEE'
+        description: A documentation change is required.
+        alias:
+          - documentation
+        siblings: []
+      kind/improvement:
+        color: '#EEEEEE'
+        description: An improvement to existing feature and code.
+        alias: []
+        siblings: []
+      kind/feature:
+        color: '#EEEEEE'
+        description: A request for a new feature.
+        alias:
+          - enhancement
+          - help wanted
+        siblings: []
+      kind/regression:
+        color: '#EEEEEE'
+        description: A reported bug in functionality that used to work before.
+        alias: []
+        siblings: []
+      kind/bug:
+        color: '#EEEEEE'
+        description: A reported bug.
+        alias:
+          - bug
+        siblings: []
+      bug/2-confirmed:
+        color: '#FF5D5D'
+        description: We have confirmed that this is a bug.
+        alias: []
+        siblings:
+          - kind/bug
+      bug/1-repro-available:
+        color: '#FF5D5D'
+        description: A reproduction exists and needs to be confirmed.
+        alias: []
+        siblings:
+          - kind/bug
+      bug/0-needs-info:
+        color: '#FF5D5D'
+        description: More information is needed for reproduction.
+        alias: []
+        siblings:
+          - kind/bug
