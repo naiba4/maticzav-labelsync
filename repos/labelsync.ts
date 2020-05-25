@@ -27,40 +27,40 @@ export const labelSync = repo({
     /* Kind */
     label({
       name: 'kind/bug',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'A reported bug.',
       alias: ['bug'],
     }),
     label({
       name: 'kind/regression',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'A reported bug in functionality that used to work before.',
     }),
     label({
       name: 'kind/feature',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'A request for a new feature.',
       alias: ['enhancement', 'help wanted'],
     }),
     label({
       name: 'kind/improvement',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'An improvement to existing feature and code.',
     }),
     label({
       name: 'kind/docs',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'A documentation change is required.',
       alias: ['documentation'],
     }),
     label({
       name: 'kind/discussion',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'Discussion is required.',
     }),
     label({
       name: 'kind/question',
-      color: colors.neutral,
+      color: colors.shiny,
       description: 'Developer asked a question. No code changes required.',
       alias: ['question'],
     }),

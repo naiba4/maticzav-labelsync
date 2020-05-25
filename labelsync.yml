@@ -3,91 +3,111 @@ repos:
     config:
       removeUnconfiguredLabels: false
     labels:
-      wontfix:
-        color: '#000000'
-        description: This will not be worked on
-        alias: []
-        siblings: []
-      question:
-        color: '#d876e3'
-        description: Further information is requested
-        alias: []
-        siblings: []
-      invalid:
-        color: '#e4e669'
-        description: This doesn't seem right
-        alias: []
-        siblings: []
       help wanted:
-        color: '#008672'
-        description: Extra attention is needed
-        alias: []
-        siblings: []
-      good first issue:
-        color: '#7057ff'
-        description: Good for newcomers
-        alias: []
-        siblings: []
-      enhancement:
-        color: '#a2eeef'
-        description: New feature or request
-        alias: []
-        siblings: []
-      duplicate:
-        color: '#cfd3d7'
-        description: This issue or pull request already exists
-        alias: []
-        siblings: []
-      documentation:
-        color: '#0075ca'
-        description: Improvements or additions to documentation
-        alias: []
-        siblings: []
-      bug:
-        color: '#d73a4a'
-        description: Something isn't working
-        alias: []
-        siblings: []
-  label-sync:
-    config:
-      removeUnconfiguredLabels: true
-    labels:
+        color: '#9cedc6'
+        description: Looking for help from community.
+        alias:
+          - help-wanted
+        siblings:
+          - kind/question
       kind/question:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: Developer asked a question. No code changes required.
         alias:
           - question
         siblings: []
       kind/discussion:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: Discussion is required.
         alias: []
         siblings: []
       kind/docs:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A documentation change is required.
         alias:
           - documentation
         siblings: []
       kind/improvement:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: An improvement to existing feature and code.
         alias: []
         siblings: []
       kind/feature:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A request for a new feature.
         alias:
           - enhancement
           - help wanted
         siblings: []
       kind/regression:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A reported bug in functionality that used to work before.
         alias: []
         siblings: []
       kind/bug:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
+        description: A reported bug.
+        alias:
+          - bug
+        siblings: []
+      bug/2-confirmed:
+        color: '#FF5D5D'
+        description: We have confirmed that this is a bug.
+        alias: []
+        siblings:
+          - kind/bug
+      bug/1-repro-available:
+        color: '#FF5D5D'
+        description: A reproduction exists and needs to be confirmed.
+        alias: []
+        siblings:
+          - kind/bug
+      bug/0-needs-info:
+        color: '#FF5D5D'
+        description: More information is needed for reproduction.
+        alias: []
+        siblings:
+          - kind/bug
+  label-sync:
+    config:
+      removeUnconfiguredLabels: true
+    labels:
+      kind/question:
+        color: '#3BDB8D'
+        description: Developer asked a question. No code changes required.
+        alias:
+          - question
+        siblings: []
+      kind/discussion:
+        color: '#3BDB8D'
+        description: Discussion is required.
+        alias: []
+        siblings: []
+      kind/docs:
+        color: '#3BDB8D'
+        description: A documentation change is required.
+        alias:
+          - documentation
+        siblings: []
+      kind/improvement:
+        color: '#3BDB8D'
+        description: An improvement to existing feature and code.
+        alias: []
+        siblings: []
+      kind/feature:
+        color: '#3BDB8D'
+        description: A request for a new feature.
+        alias:
+          - enhancement
+          - help wanted
+        siblings: []
+      kind/regression:
+        color: '#3BDB8D'
+        description: A reported bug in functionality that used to work before.
+        alias: []
+        siblings: []
+      kind/bug:
+        color: '#3BDB8D'
         description: A reported bug.
         alias:
           - bug
@@ -115,41 +135,41 @@ repos:
       removeUnconfiguredLabels: true
     labels:
       kind/question:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: Developer asked a question. No code changes required.
         alias:
           - question
         siblings: []
       kind/discussion:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: Discussion is required.
         alias: []
         siblings: []
       kind/docs:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A documentation change is required.
         alias:
           - documentation
         siblings: []
       kind/improvement:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: An improvement to existing feature and code.
         alias: []
         siblings: []
       kind/feature:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A request for a new feature.
         alias:
           - enhancement
           - help wanted
         siblings: []
       kind/regression:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A reported bug in functionality that used to work before.
         alias: []
         siblings: []
       kind/bug:
-        color: '#EEEEEE'
+        color: '#3BDB8D'
         description: A reported bug.
         alias:
           - bug
@@ -176,10 +196,11 @@ repos:
     config:
       removeUnconfiguredLabels: true
     labels:
-      help-wanted:
+      help wanted:
         color: '#9cedc6'
         description: Looking for help from community.
-        alias: []
+        alias:
+          - help-wanted
         siblings:
           - kind/question
       kind/question:
