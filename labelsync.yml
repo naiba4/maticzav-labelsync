@@ -1,7 +1,7 @@
 repos:
   resk:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: true
     labels:
       help wanted:
         color: '#9cedc6'

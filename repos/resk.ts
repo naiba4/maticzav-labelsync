@@ -1,11 +1,8 @@
 import { repo, label, colors } from 'label-sync'
 
-/**
- * Default collection of label in a Github repository.
- */
 export const resk = repo({
   config: {
-    removeUnconfiguredLabels: false,
+    removeUnconfiguredLabels: true,
   },
   labels: [
     /* Bugs */
