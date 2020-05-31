@@ -64,6 +64,11 @@ export const nookies = repo({
       description: 'Developer asked a question. No code changes required.',
       alias: ['question'],
     }),
+    label({
+      name: ' dependencies',
+      color: '#0366d6',
+      description: 'Issue of Pull Request concerning dependencies.',
+    }),
     /* Other */
     label({
       name: 'help wanted',

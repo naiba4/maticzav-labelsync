@@ -203,6 +203,11 @@ repos:
           - help-wanted
         siblings:
           - kind/question
+      ' dependencies':
+        color: '#0366d6'
+        description: Issue of Pull Request concerning dependencies.
+        alias: []
+        siblings: []
       kind/question:
         color: '#3BDB8D'
         description: Developer asked a question. No code changes required.
