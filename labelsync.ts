@@ -5,6 +5,7 @@ import { graphqlshield } from './repos/graphqlshield'
 import { labelSync } from './repos/labelsync'
 import { nookies } from './repos/nookies'
 import { resk } from './repos/resk'
+import { njamnjam } from './repos/njamnjam'
 
 /* Config */
 labelsync({
@@ -13,5 +14,6 @@ labelsync({
     'label-sync': labelSync,
     'graphql-shield': graphqlshield,
     nookies: nookies,
+    njamnjam: njamnjam,
   },
 })
