@@ -1,0 +1,41 @@
+on:
+    pull_request:
+      types: [opened]
+    issue_comment:
+      types: [created]
+  
+  jobs:
+    regenerate-labelsync:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: khan/pull-request-comment-trigger@master
+          id: check
+          with:
+            trigger: '/labelsync'
+            reaction: rocket
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+        # needed to be able to check out correct branch
+        - uses: xt0rted/pull-request-comment-branch@v1
+          if: steps.check.outputs.triggered == 'true'
+          id: comment-branch
+          with:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+  
+        - uses: actions/checkout@v2
+          if: steps.check.outputs.triggered == 'true'
+          with:
+            ref: ${{ steps.comment-branch.outputs.head_ref }}
+  
+        - run: 'yarn'
+          if: steps.check.outputs.triggered == 'true'
+  
+        - run: 'yarn make'
+          if: steps.check.outputs.triggered == 'true'
+  
+        - uses: stefanzweifel/git-auto-commit-action@v4
+          if: steps.check.outputs.triggered == 'true'
+          with:
+            commit_message: Regenerate labelsync.yml
+  
