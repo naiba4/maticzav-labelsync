@@ -12,6 +12,7 @@ labelsync({
     resk,
     'label-sync': labelSync,
     'graphql-shield': graphqlshield,
+    'graphql-middleware': graphqlshield,
     nookies: nookies,
   },
 })
